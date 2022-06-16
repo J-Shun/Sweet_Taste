@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./style/all.css">
+    <title>Checkout2</title>
+</head>
+<body>
+    
+    <div class="header ptb-30">
+        <div class="container flex jcsb aic">
+            <div class="bar-icon">
+                <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/dehaze-24px.png?raw=true">
+            </div>
+
+            <a href="#">
+                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/student-week1/logo-all-dark.svg" alt="logo" class="logo logo-bg">
+                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/student-week1/logotype-sm-dark.svg" alt="logo" class="logo logo-sm">
+            </a>
+    
+            <div class="navbar flex">
+                <ul class="nav-list flex jcsb aic">
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="product.html">甜點</a></li>
+                    <li><a href="login.html">登入</a></li>
+                </ul>
+    
+                <a href="cart.html">
+                    <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/shopping_cart.png?raw=true" alt="shopping car">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="checkout">
+            <div class="container-sm grid gap">
+                <form class="user-info">
+                    <div class="delivery-info">
+                        <div class="grid grid-col-2 mb-30">
+                            <h3>付款</h3>
+                            <div class="circles half-line flex jcsb aic">
+                                <span class="material-icons">check_circle</span>
+                                <div class="circle check"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="grid grid-col-1 mb-16">
+                            <div class="credit-card-corner">
+                                <label for="credit-card">信用卡卡號</label>
+                                <div class="input-credit-card">
+                                    <span class="material-icons input-icon credit-card-icon">add_card</span>
+                                    <input type="text" id="credit-card" placeholder="9012-3456-7890-1234">
+                                </div>
+                            </div>
+                        </div>
+                        <label for="card-owner-last-name">持卡人姓名</label>
+                        <div class="grid grid-col-2 mb-16">
+                            <div class="card-owner-last-name-corner">
+                                <input type="text" id="card-owner-last-name" placeholder="王">
+                            </div>
+                            <div class="card-owner-first-name-corner">
+                                <input type="text" id="card-owner-first-name" placeholder="小明">
+                            </div>
+                        </div>
+                        <label for="month-corner">有效期限</label>
+                        <div class="grid grid-col-2 mb-16">
+                            <div class="month-corner">
+                                <input type="number" id="month-corner" placeholder="月" min="1" max="12">
+                            </div>
+                            <div class="year-corner">
+                                <input type="number" placeholder="年" min="2022">
+                            </div>
+                        </div>
+                        <label for="last-3">背面末三碼</label>
+                        <div class="grid grid-col-2">
+                            <div class="last-3">
+                                <input type="text" id="last-3" placeholder="123">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="./checkout3.html" class="btn yellow-btn">下一步</a>
+                </form>
+    
+                <div class="side-list flex gap column pad-remove">
+                    <div class="order-sum">
+                        <h3>訂單摘要</h3>
+                        <div class="price p-0-20">
+                            <ul class="items">
+                                <li class="item flex jcsb aic">
+                                    <div class="item-title">
+                                        小計
+                                    </div>
+                                    <div class="item-price">
+                                        NT$ 2,700
+                                    </div>
+                                </li>
+                                <li class="item flex jcsb aic">
+                                    <div class="item-title">
+                                        運費
+                                    </div>
+                                    <div class="item-price">
+                                        NT$ 300
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="sum flex jcsb aic">
+                                <div class="sum-title">總計</div>
+                                <div class="sum-price">NT$ 3,000</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="order-sum">
+                        <h3>購物清單</h3>
+                        <div class="shopping-list">
+                            <div class="shopping-item flex jcsb aic">
+                                <img src="https://bit.ly/2QvsT63">
+                                <div class="txt">
+                                    <div class="item">焦糖馬卡龍（2）</div>
+                                    <div class="price">NT$ 900</div>
+                                </div>
+                            </div>
+                            <div class="shopping-item flex jcsb aic">
+                                <img src="https://bit.ly/2zBDAxX">
+                                <div class="txt">
+                                    <div class="item">焦糖馬卡龍（2）</div>
+                                    <div class="price">NT$ 900</div>
+                                </div>
+                            </div>
+                            <div class="shopping-item flex jcsb aic">
+                                <img src="https://bit.ly/2zKOP7w">
+                                <div class="txt">
+                                    <div class="item">焦糖馬卡龍（2）</div>
+                                    <div class="price">NT$ 900</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="subscribe ptb-30">
+            <div class="container-sm flex jcsb aic pad-column">
+                <div class="subscribe-info flex aic">
+                    <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/student-week1/logo-light.svg" alt="logo">
+                    <p>訂閱你我的甜蜜郵件</p>
+                </div>
+                <form action="#" class="form flex">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" class="email">
+                    <button type="button"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_forward-24px.png?raw=true" alt="next-button"></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <div class="container-sm flex jcsb ptb-30">
+                <div class="info-left flex column jcsb">
+                    <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/student-week1/logotype-sm-dark.svg" alt="logo" class="logo">
+                    <p>07-1234-5678<br>sweetaste@email.com<br>800 高雄市新興區幸福路 520 號</p>
+                </div>
+                <img src="./image/good-day.svg" class="footer-quote">
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="container-sm flex jcsb ptb-30 phone-column">
+                <div class="links flex">
+                    <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/student-week1/ic-line%40.svg" alt="line-icon">
+                    <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/student-week1/ic-facebook.svg" alt="facebook-icon">
+                </div>
+                <div class="copyright">
+                    © 2018 Sweetaste* All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

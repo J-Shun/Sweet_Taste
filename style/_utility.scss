@@ -1,0 +1,317 @@
+.container {
+    max-width: 940px;
+    margin: auto;
+}
+
+.container-sm {
+    max-width: 780px;
+    margin: auto;
+}
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.pad-column {
+    @include pad {
+        flex-direction: column;
+    }
+}
+
+.phone-column {
+    @include phone {
+        flex-direction: column;
+    }
+}
+
+.aic {
+    align-items: center;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.jcfe {
+    justify-content: flex-end;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-col-1-pad {
+    @include pad {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-col-1-phone {
+    @include phone {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pad-remove {
+    @include pad {
+        display: none;
+    }
+}
+
+.phone-remove {
+    @include phone {
+        display: none;
+    }
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 33px;
+    text-align: center;
+    padding: 16px 0;
+    cursor: pointer;
+}
+
+.chart-btn {
+    color: $dark-green;
+    background-color: $light-green;
+
+    &:hover {
+        color: $light-green;
+        background-color: $dark-green;
+    }
+}
+
+.list-btn {
+    color: $dark-green;
+    background-color: #fff;
+
+    &.active, &:hover {
+        background-color: $light-green;
+    }
+}
+
+.yellow-btn {
+    color: $dark-green;
+    background-color: $yellow;
+
+    &:hover {
+        background-color: #ffe180e8;
+    }
+}
+
+.input-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin: auto;
+    pointer-events: none;
+}
+
+.gap {
+    gap: 20px;
+    @include pad {
+        gap: 30px;
+    }
+}
+
+.banner {
+    position: relative;
+    
+    img {
+        width: 100%;
+        max-height: 496px;
+        object-fit: cover;
+    }
+}
+
+.dessert-card {
+    position: relative;
+    text-align: center;
+    color: $dark-green;
+
+    &::before {
+        content: '本日精選';
+        position: absolute;
+        top: 0;
+        left: 20px;
+        height: 107px;
+        padding: 0px 10px;
+        writing-mode: vertical-lr;
+        letter-spacing: 5px;
+        background-color: #3f5d45;
+        color: #eaf0ed;
+        z-index: 1;
+    }
+
+    .dessert-card-img {
+        height: 315px;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .fa-heart {
+        content: '';
+        position: absolute;
+        top: 19px;
+        right: 22px;
+        width: 20px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+    .fa-solid {
+        color: $dark-green;
+        transform: scale(1.1);
+    }
+        
+    .dessert-name {
+        font-size: 20px;
+        line-height: 20px;
+        padding: 14px 0;
+        width: 60%;
+        border-left: 1px solid $light-green;
+    }
+    .dessert-price {
+        font-size: 20px;
+        line-height: 20px;
+        padding: 14px 0;
+        width: 40%;
+        border-left: 1px solid $light-green;
+        border-right: 1px solid $light-green;
+    }
+}
+
+.order-sum {
+    h3 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 33px;
+        padding: 16px 0;
+    }
+
+    .items {
+        line-height: 22px;
+        margin: 16px 0;
+        .item {
+            margin-bottom: 8px;
+        }
+    }
+
+    .sum {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 28px;
+        margin-bottom: 16px;
+    }
+}
+
+.circles {
+    position: relative;
+
+    &.no-line::before {
+        @include line;
+    }
+
+    &.half-line::before {
+        @include line;
+        background-image: linear-gradient(90deg, $light-green 50%, #8DA291 50%);
+    }
+
+    &.full-line::before {
+        @include line;
+        background-color: $light-green;
+    }
+
+    .circle {
+        position: relative;
+        background-color: #3F5D45;
+        border: 1px #8DA291 solid;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%; 
+
+    }
+
+    .material-icons {
+        background-color: $dark-green;
+        z-index: 1;
+    }
+
+    .check {
+        position: relative;
+        border: 1px $light-green solid;
+    }
+
+    .check::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background-color: #fff;
+        border-radius: 50%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }  
+}
+
+
+.p-0-20 {
+    padding: 0 20px;
+}
+
+.ptb-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+span {
+    letter-spacing: 0;
+}
+
+.none {
+    display: none;
+}
+
+.visible {
+    display: block;
+}

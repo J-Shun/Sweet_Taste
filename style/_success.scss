@@ -1,0 +1,64 @@
+.success {
+    .container {
+        position: relative;
+    }
+
+    .banner {
+        background-image: url(https://bit.ly/2P7GhNd);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 60px;
+        height: 460px;
+        gap: 30px;
+        @include pad {
+            height: 518px;
+            margin-bottom: 0;
+        }
+
+        img {
+            @include pad {
+            }
+        }
+        .check-icons {
+            width: 190px;
+            span {
+                position: relative;
+                font-size: 20px;
+                color: $dark-green;
+
+                & ~ span::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    width: 69px;
+                    height: 1px;
+                    right: 18px;
+                    background-color: $dark-green;
+                }
+            }
+        }
+    
+        img {
+            max-width: 190px;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}
+
+.shopping-btn {
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    margin: auto;
+    position: absolute;
+    width: 300px;
+    @include pad {
+        bottom: 0;
+        position: relative;
+        width: 100%;
+    }
+}

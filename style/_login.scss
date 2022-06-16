@@ -1,0 +1,134 @@
+.login {
+    margin-bottom: 60px;
+    @include pad {
+        margin-bottom: 0;
+    }
+
+    .login-corner {
+        position: relative;
+        width: 50%;
+        color: $dark-green;
+        @include pad {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 36px;
+            line-height: 50px;
+            text-align: center;
+            padding: 40px 0;
+            background-color: $dark-green;
+            color: $light-green;
+        }
+        
+        .form {
+            background-color: $dark-green;
+            
+            .enter-area {
+                padding: 0 30px;
+                @include pad {
+                    padding-top: 30px;
+                }
+
+                .input-corner {
+                    position: relative;
+                }
+                
+                .enter {
+                    width: 100%;
+                    background-color: $light-green;
+                    padding: 18px 0 16px 64px;
+                    margin-bottom: 16px;
+                    border: none;
+                    line-height: 22px;
+                }
+
+                .check {
+                    margin-bottom: 25px;
+                    @include pad {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                input[type='checkbox'] {
+                    width: 16px;
+                    height: 16px;
+                    margin: 0 8px 0 0;
+                }
+
+                label {
+                    color: $light-green;
+                }
+            }
+
+        }
+    }
+
+    .other-account {
+        position: absolute;
+        top: 15px;
+        bottom: 15px;
+        left: 100%;
+        width: 100%;
+        background-color: $light-green;
+        padding: 0 30px;
+        @include pad {
+            position: relative;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        h3 {
+            color: #8DA291;
+            font-size: 24px;
+            line-height: 33px;
+            text-align: center;
+            padding: 40px 0 36px;
+            @include pad {
+                display: none;
+            }
+        }
+
+        ul {
+            @include pad {
+                display: flex;
+            }
+        }
+
+        li {
+            width: 100%;
+            height: 56px;
+            background-color: #fff;
+            cursor: pointer;
+            
+            &:not(:last-of-type) {
+                margin-bottom: 16px;
+                @include pad {
+                    margin-bottom: 0;
+                    border-right: 1px solid $light-green;
+                }
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+            }
+
+            .facebook {
+                max-height: 21px;
+            }
+
+            .google {
+                max-height: 31px;
+            }
+
+            .yahoo {
+                max-height: 22px;
+            }
+        }
+    }
+}
+

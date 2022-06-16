@@ -1,0 +1,160 @@
+.cart {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    @include pad {
+        margin: 0;
+    }
+
+    .grid {
+        grid-template-columns: 2fr 1fr;
+        @include pad {
+            grid-template-columns: 1fr;
+            
+        }
+    }
+
+    .my-cart {
+        h2 {
+            font-size: 24px;
+            line-height: 33px;
+            color: $dark-green;
+            background-color: $light-green;
+            padding: 16px 0;
+            text-align: center;
+            margin-bottom: 33px;
+        }
+
+        .cart-items {
+            @include pad {
+                padding: 0 30px;
+            }
+
+            .cart-detail {
+                flex: 5;
+                @include pad {
+                    width: 100%;
+                    border-bottom: 1px solid $light-green;
+                    padding-bottom: 8.5px;
+                    margin-bottom: 8.5px;
+                }
+            }
+
+            .img-container {
+                flex: 1;
+            }
+
+            .cart-item {
+                color: $dark-green;
+                border-bottom: 1px solid $light-green;
+                padding-bottom: 20px;
+                @include pad {
+                    padding-bottom: 8.5px;
+                }
+                
+                &:last-of-type {
+                    border-bottom: none;
+                    @include pad {
+                        border-bottom: 1px solid $light-green;
+                    }
+                }
+
+                img {
+                    width: 110px;
+                    height: 110px;
+                    object-fit: cover;
+                    @include pad {
+                        max-height: 106px;
+                        width: 40%;
+                    }
+                    @include phone {
+                        width: 80%;
+                    }
+                }
+
+                .txt {
+                    flex: 1;
+                    @include pad {
+                        margin-bottom: 8px;
+                    }
+                }
+
+                .cart-info {
+                    flex: 2;
+                    @include pad {
+                        flex: 0;
+                    }
+
+                    p:first-of-type {
+                        font-size: 20px;
+                        margin-bottom: 3px;
+                    }
+
+                    .quantity {
+                        flex: 1;
+                        input {
+                            width: 48px;
+                            height: 48px;
+                            background-color: #fff;
+                            border: 1px solid $light-green;
+                            text-align: center;
+
+                            &[type='button'] {
+                                cursor: pointer;
+                                font-size: 16px;
+                                color: $dark-green;
+                            }
+                        }
+                        
+                        // remove the sidebar
+                        input::-webkit-outer-spin-button,
+                        input::-webkit-inner-spin-button {
+                          -webkit-appearance: none;
+                          margin: 0;
+                        }
+                        input[type=number] {
+                            -moz-appearance: textfield;
+                        }
+                    }
+                }
+
+                .total-price {
+                    flex: 1;
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: 28px;
+                    @include pad {
+                        align-self: flex-end;
+                    }
+                }
+
+                .remove-icon {
+                    color: #8DA291;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $dark-green;
+                    }
+                }
+            }
+        }
+    }
+
+    .order-sum {
+        color: $light-green;
+        background-color: $dark-green;
+        align-self: start;
+        @include pad {
+            color: $dark-green;
+            background-color: #fff;
+            align-self: stretch;
+        }
+
+        h3 {
+            border-bottom: 1px solid $light-green;
+            @include pad {
+                background-color: $light-green;
+                border-bottom: none;
+            }
+        }
+    }
+}

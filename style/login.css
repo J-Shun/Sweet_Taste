@@ -1,0 +1,15 @@
+.login {
+  margin-bottom: 60px;
+}
+
+.login .login-corner {
+  position: relative;
+  width: 50%;
+}
+
+.login .other-account {
+  position: absolute;
+  left: 100%;
+  width: 50%;
+}
+/*# sourceMappingURL=login.css.map */

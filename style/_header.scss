@@ -1,0 +1,49 @@
+.header {
+    .container {
+        @include pad {
+            padding: 0 30px;
+        }
+    }
+
+    .bar-icon {
+        cursor: pointer;
+        display: none;
+        @include pad {
+            display: block;
+        }
+    }
+
+    .logo {
+        height: 40px;
+        @include pad {
+            height: 18px;;
+        }
+    }
+
+    .logo-bg {
+        @include pad {
+            display: none;
+        }
+    }
+
+    .logo-sm {
+        display: none;
+        @include pad {
+            display: block;
+        }
+    }
+
+    .nav-list {
+        column-gap: 60px;
+        margin-right: 79px;
+        @include pad {
+            display: none;
+        }
+
+        a {
+            font-size: 16px;
+            font-weight: bold;
+            color: $dark-green;
+        }
+    }
+}

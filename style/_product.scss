@@ -1,0 +1,99 @@
+.product-banner {
+    margin-bottom: 60px;
+    @include pad {
+        margin-bottom: 0;
+    }
+}
+
+.products {
+    margin-bottom: 60px;
+    @include pad {
+        margin-bottom: 30px;
+    }
+
+    .container {
+        grid-template-columns: 1fr 2fr;
+        @include pad {
+            grid-template-columns: 100%;
+        }
+    }
+
+    .list {
+    
+        h2 {
+            font-size: 24px;
+            line-height: 33px;
+            color: $light-green;
+            background-color: $dark-green;
+            padding: 16px 0;
+            text-align: center;
+        }
+    
+        li {
+            a {
+                border-top: 1px solid $light-green;
+                border-left: 1px solid $light-green;
+                border-right: 1px solid $light-green;
+            }
+            
+            &:last-of-type {
+                a {
+                    border-bottom: 1px solid $light-green;
+                }
+            }
+        }
+    }
+
+    .product-list {
+        margin-bottom: 30px;
+        @include pad {
+            max-width: 750px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include phone {
+            max-width: 375px;
+        }
+    }
+
+    .pages {
+        @include pad {
+            justify-content: center;
+        }
+
+        li {
+            border-top: 1px solid $light-green;
+            border-bottom: 1px solid $light-green;
+            border-left: 1px solid $light-green;
+            
+            &:last-of-type {
+                border-right: 1px solid $light-green;
+            }
+
+            .page {
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+                line-height: 60px;
+                color: $dark-green;
+                background-color: #fff;
+                text-align: center;
+            
+                &.active {
+                    background-color: $dark-green;
+                    color: $light-green;
+                }
+            }
+
+            a:hover {
+                background-color: $dark-green;
+                color: $light-green;
+            }
+            
+            
+        }
+    }
+}

@@ -1,0 +1,182 @@
+.card {
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    background-color: $dark-green;
+    padding: 63px;
+    writing-mode: vertical-lr;
+    letter-spacing: 10px;
+    transform: translateY(-60px);
+    cursor: pointer;
+    @include pad {
+        width: 100%;
+        padding: 40px 0;
+        transform: translateY(0);
+    }
+
+    &.active {
+        font-weight: bold;
+        color: $dark-green;
+        background-color: $yellow;
+    }
+
+    & ~ & {
+        border-left: 1px solid #fff;
+    }
+
+    &:hover {
+        &::before {
+            opacity: 0;
+        }
+    }
+}
+
+.card-img1 {
+    @include blur-background;
+    &::before {
+        background-image: url(https://bit.ly/2R5tqwD);
+    }
+}
+
+.card-img2 {
+    @include blur-background;
+    &::before {
+        background-image: url(https://bit.ly/2Dwoxd7);
+    }
+}
+
+.card-img3 {
+    @include blur-background;
+    &::before {
+        background-image: url(https://bit.ly/2OUteif);
+        transform: rotate(180deg);
+    }
+}
+
+.reasons {
+    margin-bottom: 80px;
+    @include pad {
+        margin-bottom: 30px;
+    }
+
+    .reason-corner {
+        // 字的間距有時間確認一下
+        position: relative;
+        margin-bottom: 60px;
+        @include pad {
+            
+            margin-bottom: 0;
+        }
+    
+        &:last-of-type {
+            margin-bottom: 80px;
+            @include pad {
+                margin-bottom: 0;
+            }
+        }
+    
+        .reason-img {
+            width: 460px;
+            max-height: 460px;
+            object-fit: cover;
+            @include pad {
+                width: 100%;
+                max-height: 450px;
+            }
+            @include phone {
+                max-height: 250px;
+            }
+    
+            &.order {
+                order: 1;
+                @include pad {
+                    order: 0;
+                }
+            }
+        }
+    
+        .reason-txt {
+            max-height: 280px;
+            writing-mode: vertical-rl;
+            color: #8DA291;
+            font-size: 16px;
+            line-height: 40px;
+            @include pad {
+                writing-mode: initial;
+                display: flex;
+                align-items: center;
+                position: relative;
+                max-height: none;
+                width: 100%;
+                padding: 30px;
+                line-height: 32px;
+            }
+    
+            &::before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                background-color: $light-green;
+                z-index: -1;
+                @include pad {
+                    top: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    
+        .question-img-bg {
+            align-self: flex-start;
+            max-height: 307px;
+            @include pad {
+                display: none;
+            }
+        }
+    
+        .question-img-sm {
+            display: none;
+            @include pad {
+                display: block;
+                max-height: 60px;
+                order: -1;
+                margin: 30px 0;
+            }
+        }
+    }
+    
+    .reason-motto-bg {
+        display: block;
+        max-height: 327px;
+        margin: auto;
+        @include pad {
+            display: none;
+        }
+    }
+    
+    .reason-motto-sm {
+        display: none;
+        @include pad {
+            display: block;
+            max-height: 60px;
+            margin: 30px auto 0;
+        }
+    }
+}
+
+.dessert {
+    margin-bottom: 60px;
+    @include pad {
+        margin-bottom: 30px;
+    }
+
+    .container {
+        @include pad {
+            max-width: 375px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
